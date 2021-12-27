@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+    <style>
+        body{background-color: #000;}
+        .page-container {position:relative;top:0;width: 100%;overflow-x: hidden;}
+        .video-box::before{content: '';position: absolute;bottom: 0;left: 0;width: 100%;height: 25%;background: linear-gradient(0deg,rgba(0,0,0,1)0%,rgba(0,0,0,0)100%);}
+        .page-item {display:flex;position:absolute;justify-content:center;align-items:center;width:100%;min-height:100vh;}
+        .video-box{width:100%;height:100%;position:absolute;overflow:hidden;top:0;right:0;}
+        .wd-box{top: 0;left: 50%;width: 50vw;min-width: 320px;transform: translateX(-50%);z-index: 1;}
+        .wd-box span{
+            min-height: 50vh;
+            color: transparent;
+            font-family: 'Chonburi', cursive;
+            -webkit-filter:drop-shadow(0px 0px 10px #000);
+        }
+        .wd-box span::before{
+            content: attr(data-wd);
+            position: absolute;
+            color:transparent;
+            text-shadow: 2px 2px 0 #f00, 2px 0px 0 #f00, 2px -2px 0 #f00, 0px -2px 0 #f00, -2px -2px 0 #f00, -2px 0px 0 #f00, -2px 2px 0 #f00, 0px 2px 0 #f00;
+            z-index: -1;
+        }
+        .wd-box span::after{
+            content: attr(data-wd);
+            position: absolute;
+            background: rgb(186,109,0);
+            background: -moz-linear-gradient(0deg, rgba(186,109,0,1) 25%, rgba(255,245,168,1) 50%, rgba(255,192,0,1) 67.5%, rgba(255,245,168,1) 70%, rgba(255,184,0,1) 75%);
+            background: -webkit-linear-gradient(0deg, rgba(186,109,0,1) 25%, rgba(255,245,168,1) 50%, rgba(255,192,0,1) 67.5%, rgba(255,245,168,1) 70%, rgba(255,184,0,1) 75%);
+            background: linear-gradient(0deg, rgba(186,109,0,1) 25%, rgba(255,245,168,1) 50%, rgba(255,192,0,1) 67.5%, rgba(255,245,168,1) 70%, rgba(255,184,0,1) 75%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ba6d00",endColorstr="#ffb800",GradientType=1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        span.change{animation: change linear normal both 6.6s;}
+        .z-1{z-index: 1;}
+        @keyframes change {
+            0%{font-size: 2rem;}
+            100%{font-size: 6rem;}
+        }
+        @media screen and (max-width:500px) {
+            h2{font-size: 1.5rem;}
+            h3{font-size: 1.25rem;}
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="page-item">
+            <div class="video-box d-flex justify-content-center">
+                <video id="media" autoplay="ture" muted="muted" height="100%" src="images/video.mp4"></video>
+            </div>
+        </div>
+        <div class="position-relative text-light wd-box">
+            <span class=" d-flex align-items-center justify-content-center font-weight-bolder"></span>
+            <div class="px-2">
+                <h2 class="text-center">คืนกำไรให้ลูกค้า แจกเครดิตเยียวยาทุกๆ 2 สัปดาห์สูงสุด 8,888 ต่อคน</h2>
+                <h3>เงื่อนไขกิจกรรม :</h3>
+                <ol class="m-0">
+                    <li>ระบบจะสุ่มแจกทุกๆ2สัปดาห์ ไม่กำหนดวันที่</li>
+                    <li>เงินรางวัลมี 300 / 500 / 1,000 / 3,000 / 5,000 / 8,888</li>
+                    <li>ต้องทำเทิร์น 3เท่า ถอนได้ไม่จำกัด</li>
+                    <li>เล่นได้ทุกค่ายเกม ยกเว้น กีฬากับแทงหวย（หากไปเล่นจะถอนไม่ได้และจะโดนยึดเครดิตคืนทั้งหมด）</li>
+                    <li>โปรอื่นๆ คลิ๊กดูที่หน้าเว็บได้เลย <a class="text-warning" href="#">www.pay69.com</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="row w-100 mx-0 px-2 z-1">
+            <a class="col-12 col-md-6 px-1" href=""><img class="w-100 py-1" src="https://download.ocms365.com/v2/PA/PromotionInfoLanguage68640?version=0" alt=""></a>
+            <a class="col-12 col-md-6 px-1" href=""><img class="w-100 py-1" src="https://download.ocms365.com/v2/PA/PromotionInfoLanguage68640?version=0" alt=""></a>
+            <a class="col-12 col-md-6 px-1" href=""><img class="w-100 py-1" src="https://download.ocms365.com/v2/PA/PromotionInfoLanguage68640?version=0" alt=""></a>
+            <a class="col-12 col-md-6 px-1" href=""><img class="w-100 py-1" src="https://download.ocms365.com/v2/PA/PromotionInfoLanguage68640?version=0" alt=""></a>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script>
+        let media = document.querySelector('#media'); 
+        let moneyWd = document.querySelector('.wd-box span')
+        let money = ['300','500','1,000','3,000','5,000','8,888']
+        function text(){
+            for( let i = 0; i < 6; i++ ) {
+                window.setTimeout(function() {
+                    moneyWd.textContent = money[i];
+                    moneyWd.setAttribute('data-wd',money[i])
+                    console.log(i);
+                }, 1100 * i);
+            }
+        }
+        $(document).ready(function(){
+            text();
+            moneyWd.classList.add('change')
+        })
+    </script>
+</body>
+</html>
