@@ -88,14 +88,14 @@
     <script>
         let media = document.querySelector('#media'); 
         let moneyWd = document.querySelector('.wd-box span')
-        let money = ['300','500','1,000','3,000','5,000','8,888']
+        let money = ['150','300','500','1,000','2,000','3,000','5,000','8,888']
         function text(){
-            for( let i = 0; i < 6; i++ ) {
+            for( let i = 0; i < money.length; i++ ) {
                 window.setTimeout(function() {
                     moneyWd.textContent = money[i];
                     moneyWd.setAttribute('data-wd',money[i])
                     console.log(i);
-                }, 1100 * i);
+                }, 800 * i);
             }
         }
         $(document).ready(function(){
