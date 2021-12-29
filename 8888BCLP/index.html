@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="robots" content="noindex"/>
+    <title>PAY69-Lucky-Sponsor</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,13 +21,14 @@
             min-height: 50vh;
             color: transparent;
             font-family: 'Chonburi', cursive;
+            font-size: 2rem;
             -webkit-filter:drop-shadow(0px 0px 10px #000);
         }
         .wd-box span::before{
             content: attr(data-wd);
             position: absolute;
             color:transparent;
-            text-shadow: 2px 2px 0 #f00, 2px 0px 0 #f00, 2px -2px 0 #f00, 0px -2px 0 #f00, -2px -2px 0 #f00, -2px 0px 0 #f00, -2px 2px 0 #f00, 0px 2px 0 #f00;
+            text-shadow: 1.5px 1.5px 0 #f00, 1.5px 0px 0 #f00, 1.5px -1.5px 0 #f00, 0px -1.5px 0 #f00, -1.5px -1.5px 0 #f00, -1.5px 0px 0 #f00, -1.5px 1.5px 0 #f00, 0px 1.5px 0 #f00;
             z-index: -1;
         }
         .wd-box span::after{
@@ -41,11 +43,11 @@
             -webkit-background-clip: text;
             color: transparent;
         }
-        span.change{animation: change linear normal both 6.6s;}
+        span.change{animation: change linear infinite alternate both .5s;}
         .z-1{z-index: 1;}
         @keyframes change {
-            0%{font-size: 2rem;}
-            100%{font-size: 6rem;}
+            0%{transform: scale(3);}
+            100%{transform: scale(3.2);}
         }
         @media screen and (max-width:500px) {
             h2{font-size: 1.5rem;}
@@ -57,7 +59,7 @@
     <div class="page-container">
         <div class="page-item">
             <div class="video-box d-flex justify-content-center">
-                <video id="media" autoplay="ture" muted="muted" height="100%" src="images/video.mp4"></video>
+                <video id="media" autoplay="ture" muted="muted" height="100%" src="images/寶箱動畫V4金幣寬版.mp4"></video>
             </div>
         </div>
         <div class="position-relative text-light wd-box">
@@ -88,19 +90,22 @@
     <script>
         let media = document.querySelector('#media'); 
         let moneyWd = document.querySelector('.wd-box span')
-        let money = ['150','300','500','1,000','2,000','3,000','5,000','8,888']
         function text(){
-            for( let i = 0; i < money.length; i++ ) {
+            for( let i = 0; i < 8889; i++ ) {
                 window.setTimeout(function() {
-                    moneyWd.textContent = money[i];
-                    moneyWd.setAttribute('data-wd',money[i])
-                    console.log(i);
-                }, 800 * i);
+                    let ts = 1 + i/4444
+                    moneyWd.textContent = i;
+                    moneyWd.style.transform = 'scale(' + ts + ')'
+                    moneyWd.setAttribute('data-wd',i)
+                    console.log(ts);
+                }, 4000/8888 * i);
             }
         }
         $(document).ready(function(){
             text();
-            moneyWd.classList.add('change')
+            window.setTimeout(function() {
+                moneyWd.classList.add('change')
+            },4000)
         })
     </script>
 </body>
